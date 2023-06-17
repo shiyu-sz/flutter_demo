@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_demo/page/page1.dart';
 import 'package:flutter_demo/page/page2.dart';
+import 'package:flutter_demo/page/dfu.dart';
 
 class HomeWidget extends StatefulWidget {
   final BuildContext parentCtx;
@@ -30,11 +31,14 @@ class _HomeState extends State<HomeWidget>{
         label: "page1", icon: Icon(Icons.directions_run)),
     BottomNavigationBarItem(
         label: "page2", icon: Icon(Icons.list)),
+    BottomNavigationBarItem(
+        label: "dfu", icon: Icon(Icons.list)),
   ];
 
   List<Widget> _children() => [
     Page1(),
     Page2(),
+    Dfu(),
   ];
 
   changePage(int index){

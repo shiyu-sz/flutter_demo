@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_demo/page/page1.dart';
 import 'package:flutter_demo/page/camera.dart';
 import 'package:flutter_demo/page/dfu.dart';
+import 'package:flutter_demo/page/wifi_iot.dart';
 
 class HomeWidget extends StatefulWidget {
   final BuildContext parentCtx;
@@ -28,17 +29,20 @@ class _HomeState extends State<HomeWidget>{
 
   List<BottomNavigationBarItem> getTabs(BuildContext context) => [
     BottomNavigationBarItem(
-        label: "page1", icon: Icon(Icons.directions_run)),
+        label: "WifiIoT", icon: Icon(Icons.directions_run)),
     BottomNavigationBarItem(
         label: "camera", icon: Icon(Icons.list)),
     BottomNavigationBarItem(
         label: "dfu", icon: Icon(Icons.list)),
+    BottomNavigationBarItem(
+        label: "page1", icon: Icon(Icons.directions_run)),
   ];
 
   List<Widget> _children() => [
-    Page1(),
+    FlutterWifiIoT(),
     CameraExampleHome(),
     Dfu(),
+    Page1(),
   ];
 
   changePage(int index){

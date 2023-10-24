@@ -3,6 +3,7 @@ import 'package:flutter_demo/page/page1.dart';
 import 'package:flutter_demo/page/camera.dart';
 import 'package:flutter_demo/page/dfu.dart';
 import 'package:flutter_demo/page/wifi_iot.dart';
+import 'package:flutter_demo/page/app_settings.dart';
 
 class HomeWidget extends StatefulWidget {
   final BuildContext parentCtx;
@@ -29,6 +30,8 @@ class _HomeState extends State<HomeWidget>{
 
   List<BottomNavigationBarItem> getTabs(BuildContext context) => [
     BottomNavigationBarItem(
+        label: "AppSet", icon: Icon(Icons.directions_run)),
+    BottomNavigationBarItem(
         label: "WifiIoT", icon: Icon(Icons.directions_run)),
     BottomNavigationBarItem(
         label: "camera", icon: Icon(Icons.list)),
@@ -39,6 +42,7 @@ class _HomeState extends State<HomeWidget>{
   ];
 
   List<Widget> _children() => [
+    AppSet(),
     FlutterWifiIoT(),
     CameraExampleHome(),
     Dfu(),

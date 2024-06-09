@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_demo/page/page1.dart';
 import 'package:flutter_demo/page/camera.dart';
-import 'package:flutter_demo/page/dfu.dart';
 import 'package:flutter_demo/page/app_settings.dart';
 import 'package:flutter_demo/page/google_map.dart';
 
@@ -36,16 +35,13 @@ class _HomeState extends State<HomeWidget>{
     BottomNavigationBarItem(
         label: "camera", icon: Icon(Icons.list)),
     BottomNavigationBarItem(
-        label: "dfu", icon: Icon(Icons.list)),
-    BottomNavigationBarItem(
         label: "page1", icon: Icon(Icons.directions_run)),
   ];
 
   List<Widget> _children() => [
-    MapSample(),
+    MapsDemo(),
     AppSet(),
     CameraExampleHome(),
-    Dfu(),
     Page1(),
   ];
 
